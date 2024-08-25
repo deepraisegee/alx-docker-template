@@ -1,0 +1,8 @@
+# ALX ENVIRONMENT ALIASES
+IMAGE_NAME='praisegee/alx-env'
+CONTAINER_NAME='alx-env'
+
+alias alx-up="docker run --name $CONTAINER_NAME -it $IMAGE_NAME"
+alias alx-ssh="docker exec -it $CONTAINER_NAME /usr/bin/bash"
+alias alx-commit="docker commit $CONTAINER_NAME $IMAGE_NAME"
+alias alx-down="docker rm -f $(docker ps -aq)"
